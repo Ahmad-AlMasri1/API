@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <!--Tailwindcss-->
+    <link href="./assets/css/output.css" rel="stylesheet">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--js libraries-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="sticky top-0 bg_hero z-100 ">
+        <div class="container mx-auto navbar bg_hero px-1 ">
+            <div class="navbar-start gap-3">
+                <div class="drawer w-8 mb-1.5 sm:hidden">
+                    <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label for="my-drawer-1" class="btn btn-ghost btn-circle drawer-button"><img class="size-10" src="./assets/image/icons/header/menu-line-horizontal.svg"/></label>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <!-- Sidebar content here -->
+                        <div class="menu bg-base-200 min-h-full w-80 p-6">
+                            <div class="up mb-auto">
+                            <div class="row justify-between">
+                                <a href="index.html" class="btn btn-ghost text-xl"><img class="w-20" src="./assets/image/logo.svg"/></a>
+                                <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay btn btn-ghost"><img class="w-7"  src="./assets/image/icons/close.svg"/></label>
+                            </div>
+                            <div class="search p-4">
+                                <label class="input">
+                                    <button class="btn btn-ghost btn-circle">
+                                        <a href="#"><img src="./assets/image/icons/header/search 02.svg"/></a>
+                                    </button>
+                                    <input type="search" required placeholder="Search" class="font-Inter text-[14px]/[22px] font-normal"/>
+                                </label>
+                            </div>  
+                            <ul>
+                                <li><a href="index.html" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Home</a></li>
+                                <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Shop</a></li>
+                                <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Product</a></li>
+                                <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Contact Us</a></li>
+                            </ul>
+                            </div>
+                            <div class="bot">
+                                <ul>
+                                <li class="border-b border-b-[#E8ECEF]">
+                                    <a href="#" class="row"><p class="font-Inter text-[18px]/[32px] font-medium text-[#6C7275] me-auto">Cart</p><p><img src="./assets/image/icons/header/shopping bag.svg"/><p class="rounded-full bg-black text-white w-6 h-6 text-center">2</p></p></a>
+                                </li>
+                                <li class="border-b border-b-[#E8ECEF]">
+                                    <a href="#" class="row"><p class="font-Inter text-[18px]/[32px] font-medium text-[#6C7275] me-auto">Wishlist</p><p><img src="./assets/image/icons/header/heart.svg"/><p class="rounded-full bg-black text-white w-6 h-6 text-center">2</p></p></a>
+                                </li>
+                                </ul>
+                                <button class="btn btn-neutral font-Inter text-[18px]/[32px] font-medium px-26.25 py-5  text-white my-5">Sign In</button>
+                                <ul class="row justify-start gap-6 items-start">
+                                    <li><a href="#"><img src="./assets/image/icons/Socialmedia/instagram.svg"/></a></li>
+                                    <li><a href="#"><img src="./assets/image/icons/Socialmedia/facebook.svg"/></a></li>
+                                    <li><a href="#"><img src="./assets/image/icons/Socialmedia/youtube.svg"/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.html" class="btn btn-ghost text-xl"><img class="w-25" src="./assets/image/logo.svg"/></a>
+            </div>
+            <div class="navbar-center">
+                <ul class="row gap-10 max-sm:hidden">
+                    <li><a href="index.html" class="font-Space-Grotesk text-[14px]/[24px] font-bold">Home</a></li>
+                    <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Shop</a></li>
+                    <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Product</a></li>
+                    <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Contact Us</a></li>
+                </ul>    
+            </div>
+            <div class="navbar-end gap-0.5">
+                <button class="btn btn-ghost btn-circle max-sm:hidden">
+                    <a href="#"><img src="./assets/image/icons/header/search 02.svg"/></a>
+                </button>
+                <button class="btn btn-ghost btn-circle max-sm:hidden">
+                    <a href="#"><img src="./assets/image/icons/header/user-circle.svg"/></a>
+                </button>
+                <a href="#" class="row btn btn-ghost p-1 ">
+                    <img src="./assets/image/icons/header/shopping bag.svg"/>
+                    <p class="rounded-full bg-black text-white w-6 h-6">2</p>
+                </a>
+            </div>
+        </div>
+   </header>
+   
+    <div class="container mx-auto px-1">
+        <div class="flex justify-between">
+            <h1 class="category text-black font-Inter text-[46px]/[36px] font-bold my-15"></h1>
+            <div class="row gap-3">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn m-1 w-35">Title</div>
+                    <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li><button onclick="displayProducts('ta')">Ascending</button></li>
+                        <li><button onclick="displayProducts('td')">Descending</button></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn m-1 w-35">Price</div>
+                    <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li><button onclick="displayProducts('pa')">Ascending</button></li>
+                        <li><button onclick="displayProducts('pd')">Descending</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="products grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 max-sm:grid-cols-2 gap-5">
+
+        </div>
+    
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./assets/js/category.js"></script>
+</body>
+</html>
