@@ -2,26 +2,38 @@ AOS.init();
 
 const cat= new URLSearchParams(location.search).get("cat");
 
+let skip = 0;
+
+let sort = 'ta';
+
 async function getProducts(){
-    const response= await axios.get(`https://dummyjson.com/products?limit=200`);
+    const response= await axios.get(`https://dummyjson.com/products?limit=10&skip=${skip}`);
     return response.data.products ;
 }
 
+async function getTotal(){
+
+    const response= (cat == 'all' ? await axios.get(`https://dummyjson.com/products`) : await axios.get(`https://dummyjson.com/products/category/${cat}`));
+
+    return response.data.total ;
+}
+
 async function Products(){
-    const items = await getProducts();
 
-    const result = items.filter((item)=>{
-        return item.category==cat;
-    })
+    const response= await axios.get(`https://dummyjson.com/products/category/${cat}`);
 
-    return result;
+    return response.data.products ;
 }
 
 document.querySelector(".category").textContent=cat;
 
 
 async function displayProducts(e){
-    const products = await Products();
+    
+    const products = (cat == 'all' ? await getProducts() : await Products());
+
+    sort = e;
+
     if(e=='pa'){
         products.sort((a,b) => b.price - a.price);
     }else if(e=='pd'){
@@ -50,6 +62,33 @@ async function displayProducts(e){
         `
     ).join('');
 
+
+
     document.querySelector(".products").innerHTML = result;
 }
 displayProducts('ta');
+
+async function Prev(){
+
+    if(skip!=0){
+        skip = skip - 10;
+    }
+
+    displayProducts(sort);
+
+}
+
+async function Next(){
+
+    let total = await getTotal();
+    
+    if(skip + 10 < total){
+       skip = skip + 10;
+
+       console.log(skip);
+
+    }
+
+    displayProducts(sort);
+    
+}

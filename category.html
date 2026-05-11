@@ -46,7 +46,7 @@
                             <ul>
                                 <li><a href="index.html" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Home</a></li>
                                 <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Shop</a></li>
-                                <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Product</a></li>
+                                <li><a href="category.html?cat=all" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Product</a></li>
                                 <li><a href="#" class="font-Inter text-[14px]/[24px] font-medium pb-2 border-b-2 border-b-[#E8ECEF]">Contact Us</a></li>
                             </ul>
                             </div>
@@ -75,7 +75,7 @@
                 <ul class="row gap-10 max-sm:hidden">
                     <li><a href="index.html" class="font-Space-Grotesk text-[14px]/[24px] font-bold">Home</a></li>
                     <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Shop</a></li>
-                    <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Product</a></li>
+                    <li><a href="category.html?cat=all" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Product</a></li>
                     <li><a href="#" class="font-Space-Grotesk text-[14px]/[24px] font-bold text-[#6C7275] hover:text-black transition-all delay-125">Contact Us</a></li>
                 </ul>    
             </div>
@@ -93,7 +93,7 @@
             </div>
         </div>
    </header>
-   
+    <main>
     <div class="container mx-auto px-1">
         <div class="flex justify-between">
             <h1 class="category text-black font-Inter text-[46px]/[36px] font-bold my-15"></h1>
@@ -121,6 +121,15 @@
         </div>
     
     </div>
+
+    <div class="pagination container mx-auto my-10">
+        <div class="row justify-between">
+            <button class="btn" onclick="Prev()">Prev</button>
+
+            <button class="btn" onclick="Next()">Next</button>
+        </div>
+    </div>
+</main> 
     
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
